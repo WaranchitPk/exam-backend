@@ -16,17 +16,17 @@ Exam-BackEnd
   
   - you see DATABASES = {}
   
-    3.3.1 'Name' : 'db name'
+    - 'Name' : 'db name'
     
-    3.3.2 'USER' : 'username to connect db'
+    - 'USER' : 'username to connect db'
     
-    3.3.3 'PASSWORD' : 'password to connect db'
+    - 'PASSWORD' : 'password to connect db'
     
-    3.3.4 'HOST' : '127.0.0.1'
+    - 'HOST' : '127.0.0.1'
     
     3.3.5 'PORT' : 'PORT is connect Mysql'
 4. runserver
-  4.1 Enter Command To Teerminal : python manager.py runserver
+  - Enter Command To Teerminal : python manager.py runserver
 # Thank You.  
   
   
