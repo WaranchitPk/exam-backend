@@ -26,7 +26,7 @@ Exam-BackEnd
     
     3.3.5 'PORT' : 'PORT is connect Mysql'
 4. runserver
-  - Enter Command To Teerminal : python manager.py runserver
+  - Enter Command To Terminal : python manager.py runserver
 # Thank You.  
   
   
