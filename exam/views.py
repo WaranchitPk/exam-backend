@@ -13,12 +13,7 @@ def get_or_post_data_in_stack(request):
     if request.method == 'GET':
         model_stack = Stack.objects.all()
         serializer_stack = ListStackSerializer(model_stack.order_by('-id'), many=True)
-        item = {'id': '61', 'stack_data': '2'}
-        # item.update(serializer_stack.data)
-        new_serializer_data = list(serializer_stack.data)
-        new_serializer_data.insert(2, item)
-        print(new_serializer_data)
-        return Response(new_serializer_data, status=status.HTTP_200_OK)
+        return Response(serializer_stack.data, status=status.HTTP_200_OK)
     elif request.method == 'POST':
         serializer_stack = RetrieveStackSerializer(data=request.data)
         if serializer_stack.is_valid():
@@ -33,9 +28,7 @@ def insert_at_stack(request):
         model_stack = Stack.objects.all()
         serializer_stack = ListStackSerializer(model_stack.order_by('-id'), many=True)
         stack_insert_at = list(serializer_stack.data)
-        # item = {'id': '61', request.data}
-        query_params = request.query_params.get('aa')
-        print(query_params)
+        query_params = request.query_params.get('position')
         stack_insert_at.insert(int(query_params), request.data)
         return Response(stack_insert_at)
 
